@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traffic</title>
+
+    <style>
+        body{
+            background-color: rgb(245, 229, 207);
+        }
+        .box{
+            height: 350px;
+            width: 180px;
+            border: 2px solid black;
+            border-radius: 10px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 70px;
+            background-color: rgb(18, 18, 18);
+        }
+
+        .box2{
+            height: 350px;
+            width: 50px;
+            border: 2px solid black;
+            border-radius:0px 0px 10px 10px;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: rgb(18, 18, 18);
+
+        }
+
+        .light{
+            height:100px ;
+            width:100px ;
+            background-color: rgb(246, 245, 245);
+            border-radius: 50%;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 10px;
+            box-shadow: 3px 3px 2px 2px rgb(47, 46, 46);
+
+        }
+
+        .light{
+            
+            height: 100px;
+            width: 100px;
+            background-color: rgb(247, 252, 247);
+            border-radius: 50%;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 10px; 
+            box-shadow: 3px 3px 2px 2px rgb(47, 46, 46);  
+        }
+
+        .light{
+            height:100px ;
+            width: 100px;
+            background-color: rgb(247, 247, 245);
+            border-radius: 50%;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 10px;
+            box-shadow: 3px 3px 2px 2px rgb(47, 46, 46);
+            
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="box">
+        <div class="light"></div>
+        <div class="light"></div>
+        <div class="light"></div>
+    </div>
+
+    <div class="box2"></div>
+</body>
+
+<script>
+    var i=0;
+    var cArray=["red","yellow","green"];
+    function trafficLight(){
+        var l=document.getElementByIdClassName('light');
+        for (var j=0; j<l.length;j++){
+            l[j].style.background="white";
+        }
+        l[i].style.background=cArray[i]
+        if(i<l.length){
+            i++
+        }
+        if(i==3){
+            i=0;
+        }
+    }
+       setInterval(trafficLight,1000);   
+</script>
+</html>

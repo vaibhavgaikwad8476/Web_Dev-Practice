@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <form>
+        <h1>Full Stack Development</h1>
+        Enter Your Full Name:
+        <br>
+        <input type="text" required>
+        <br><br>
+
+        Enter Your Email Id:
+        <br>
+        <input type="email" required>
+        <br><br>
+
+        Enter password :
+        <br>
+        <input type="password" required>
+        <br><br>
+
+        Enter Your College Name:
+        <br>
+        <input type="text" required>
+        <br><br>
+
+        Choose Technology:
+        <br>
+        <input list="techoptions" placeholder="choose technology :" required>
+
+        <datalist id="techoptions">
+            <option>Full stack Development</option>
+            <option>MERN stack Development</option>
+            <option>Data scientist</option>
+            <option>Machine Learning</option>
+            <option>Artificial Intelligance</option>
+            <option>java</option>
+            <option>Javascript</option>
+            <option>C</option>
+            <OPTION>Python</OPTION>
+            <option>HTML</option>
+            <option>CSS</option>
+        </datalist>
+        <br><br>
+
+        Gender:
+        <br>
+        <input type="radio" name="gender" id="male">
+        <label for="male">Male</label>
+        <br>
+        <input type="radio" name="gender" id="female">
+        <label for="female">feMale</label>
+        <br><br>
+
+        Upload Resume :
+        <br>
+        <input type="file" required>
+        <br><br>
+
+        <button type="submit">Register Now</button>
+        
+
+
+
+    </form>
+</body>
+</html>

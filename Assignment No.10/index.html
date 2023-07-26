@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        .container{
+            background-color: rgb(94, 94, 94);
+            height: 610px;
+            width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 30px;
+        }
+        #input-box{
+            height: 90px;
+            margin-left: 16PX;
+            width:360px;
+            border-radius: 10PX;
+            background-color: rgb(165, 212, 155);
+            box-shadow: inset 1px 1px 2px 2px rgb(57, 57, 57) ;
+            border: 2px rgb(48, 47, 47);
+            font-size: 50px;
+            text-align: end;
+        }
+        .h-text{
+            display: flex;
+        }
+        .calc-heading{
+            color: white;
+            padding-left: 10px;
+            padding-top: 0px;
+        }
+        #input-box1{
+            display:block;
+            width: 140px;
+            height: 50px;
+            background-color: rgb(70, 69, 69);
+            border-radius: 10px;
+            margin-top: 15px;
+            margin-left: 85px;
+            box-shadow: inset 1px 1px 1px 1px black ;
+            border: 2px rgb(59, 58, 58);
+        }
+        .item{
+            color: white;
+            padding: 5px;
+            margin: 10px;
+            height: 32px;
+            width: 50px;
+            border-radius: 10px;
+            background-color: rgb(52, 49, 49);
+            font-size: 15px;
+            text-align: center;
+            border: 2px solid rgb(103, 102, 102);
+            box-shadow: 2px 2px 1px 1px rgb(67, 67, 67);
+          
+        }
+        .itemb{
+            color: white;
+            margin: 10px;
+            height: 30px;
+            width: 50px;
+            border-radius: 10px;
+            background-color: rgb(3, 202, 3);
+            font-size: 15px;
+            text-align: center;
+            border: 1px solid rgb(103, 102, 102);
+            box-shadow: 2px 2px 1px 1px rgb(67, 67, 67);
+        }
+        .itemr{
+            color: white;
+            margin: 10px;
+            height: 30px;
+            width: 50px;
+            border-radius: 10px;
+            font-size: 15px;
+            text-align: center;
+            background-color: rgb(243, 56, 56);
+            border: 1px solid rgb(103, 102, 102);
+            box-shadow: 2px 2px 1px 1px rgb(67, 67, 67);
+        }
+        .flex-boxes{
+            justify-content: space-evenly;
+            display: flex;
+            flex-direction: row;     
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="h-text">
+
+        <div>
+        <p class="calc-heading">CASIO
+            <br> fx-991ES PLUS <BR>
+               <I> NATURAL-U.P.M.P</I>
+        </p>
+       </div>
+        <div>
+            <input type="text" id="input-box1">
+        </div>
+
+        </div>
+        
+        <div>
+        <input type="text" id="input-box"/>
+        </div>
+
+        <div class="flex-boxes">
+            <button class="itemr">ON</button>
+            <button class="itemr">OFF</button>
+            <button class="item">sin</button>
+            <button class="item">cos</button>
+            <button class="item">tan</button>
+        </div>
+
+        <div class="flex-boxes">
+            <button class="item">CALC</button>
+            <button class="item">log</button>
+            <button class="item">ln</button>
+            <button class="item">hyp</button>
+            <button class="item">x</button>
+        </div>
+
+        <div class="flex-boxes">
+            <button class="item">DEC</button>
+            <button class="item">HEX</button>
+            <button class="item">BIN</button>
+            <button class="item">OCT</button>
+            <button class="item">(-)</button>
+        </div>
+
+        <div class="flex-boxes">
+            <button class="item">RCL</button>
+            <button class="item">ENG</button>
+            <button class="item">(</button>
+            <button class="item">)</button>
+            <button class="item">%</button>
+        </div>
+
+        <div class="flex-boxes">
+            <button class="item">7</button>
+            <button class="item">8</button>
+            <button class="item">9</button>
+            <button class="itemb">DEL</button>
+            <button class="itemb">AC</button>
+        </div>
+
+        <div class="flex-boxes" >
+            <button class="item">4</button>
+            <button class="item">5</button>
+            <button class="item">6</button>
+            <button class="item">*</button>
+            <button class="item">/</button>
+        </div>
+
+        <div class="flex-boxes">
+            <button class="item">1</button>
+            <button class="item">2</button>
+            <button class="item">3</button>
+            <button class="item">+</button>
+            <button class="item">-</button>
+        </div>
+
+        <div class="flex-boxes">
+            <button class="item">0</button>
+            <button class="item">00</button>
+            <button class="item">.</button>
+            <button class="item">Ans</button>
+            <button class="item">=</button>
+        </div>
+
+
+    </div>
+</body>
+</html>

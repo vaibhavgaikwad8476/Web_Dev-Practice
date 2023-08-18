@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Javasrcipt</title>
+    <style>
+        body{
+            margin: 40px;
+        }
+        .box{
+            height: 540px;
+            width: 350px;
+            border: 2px solid rgb(66, 66, 66);
+            border-radius: 15px;
+            margin-left: auto;
+            margin-right: auto;
+           
+        }
+        #product-img{
+            margin-left: 70px;
+            margin-top: 30px;
+        }
+        .heading{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: 20px;
+            padding-left: 15px;
+        }
+        .btn{
+            display: flex;
+            justify-content: space-around;
+        }
+        #Quant{
+            padding-left: 10px;
+            padding-right: 10px;
+            border: 1px solid black;
+            border-radius: 25x;
+            cursor: pointer;
+            font-size: 20px;
+        }
+        #quantity{
+            font-size: 10px;
+        }
+        .description{
+            padding: 10px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            color: gray;
+            font-size: 15px;
+        }
+        #cart{
+            padding-left: 5px;
+            padding-right: 5px;
+            border-radius: 25x;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+       <img src="https://cdn.shopify.com/s/files/1/0272/4714/9155/products/clarina-anti-acne-face-wash-gel_large.jpg?v=1622098637" alt="Image" height="200px"  id="product-img"/>
+       <p class="heading">Clarina Anti-Acne Face Wash Gel</p>
+
+    <div class="btn">
+       <button onclick="increase()" id="Quant">+</button>
+       <p id="quantity">0</p>
+       <button onclick="decrease()" id="Quant">-</button>
+       <button id="cart">Buy Now</button>
+    </div>
+    <p class="description">Neem (Nimba) is especially beneficial for skin disorders like eczema and minor skin infections. Neem leaves also eliminate acne-causing bacteria.
+        Barbados Aloe (Ghrita-kumari) is revered in Ayurveda for its wound healing properties. When applied topically, the antiseptic, astringent and antibacterial activity of the herb relieves acne.
+    </p>
+    </div>
+
+    <script>
+        function increase(){
+            const quantityElement = document.getElementById('quantity');
+            quantityElement.innerText = parseInt( quantityElement.innerText) + 1 ;
+
+        }
+        function decrease(){
+            const quantityElement = document.getElementById('quantity');
+            quantityElement.innerText =  parseInt(quantityElement.innerText )- 1 ;
+        }
+
+        
+    </script>
+</body>
+
+</html>

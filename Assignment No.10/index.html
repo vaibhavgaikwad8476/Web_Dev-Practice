@@ -53,6 +53,7 @@
             text-align: center;
             border: 2px solid rgb(103, 102, 102);
             box-shadow: 2px 2px 1px 1px rgb(67, 67, 67);
+            cursor: pointer;
           
         }
         .itemb{
@@ -66,6 +67,7 @@
             text-align: center;
             border: 1px solid rgb(103, 102, 102);
             box-shadow: 2px 2px 1px 1px rgb(67, 67, 67);
+            cursor: pointer;
         }
         .itemr{
             color: white;
@@ -78,6 +80,7 @@
             background-color: rgb(243, 56, 56);
             border: 1px solid rgb(103, 102, 102);
             box-shadow: 2px 2px 1px 1px rgb(67, 67, 67);
+            cursor: pointer;
         }
         .flex-boxes{
             justify-content: space-evenly;
@@ -115,7 +118,7 @@
         </div>
 
         <div class="flex-boxes">
-            <button class="item">CALC</button>
+            <button class="item" onclick="clearScreen('')">CALC</button>
             <button class="item">log</button>
             <button class="item">ln</button>
             <button class="item">hyp</button>
@@ -133,44 +136,62 @@
         <div class="flex-boxes">
             <button class="item">RCL</button>
             <button class="item">ENG</button>
-            <button class="item">(</button>
-            <button class="item">)</button>
-            <button class="item">%</button>
+            <button class="item" onclick="handleClick('(')">(</button>
+            <button class="item" onclick="handleClick(')')">)</button>
+            <button class="item" onclick="handleClick('%')">%</button>
         </div>
 
         <div class="flex-boxes">
-            <button class="item">7</button>
-            <button class="item">8</button>
-            <button class="item">9</button>
-            <button class="itemb">DEL</button>
-            <button class="itemb">AC</button>
+            <button class="item" onclick="handleClick('7')">7</button>
+            <button class="item" onclick="handleClick('8')">8</button>
+            <button class="item" onclick="handleClick('9')">9</button>
+            <button class="itemb" onclick="clearScreen('')">DEL</button>
+            <button class="itemb" onclick="clearScreen('')">AC</button>
         </div>
 
         <div class="flex-boxes" >
-            <button class="item">4</button>
-            <button class="item">5</button>
-            <button class="item">6</button>
-            <button class="item">*</button>
-            <button class="item">/</button>
+            <button class="item" onclick="handleClick('4')">4</button>
+            <button class="item" onclick="handleClick('5')">5</button>
+            <button class="item" onclick="handleClick('6')">6</button>
+            <button class="item" onclick="handleClick('*')">x</button>
+            <button class="item" onclick="handleClick('/')">/</button>
         </div>
 
         <div class="flex-boxes">
-            <button class="item">1</button>
-            <button class="item">2</button>
-            <button class="item">3</button>
-            <button class="item">+</button>
-            <button class="item">-</button>
+            <button class="item" onclick="handleClick('1')">1</button>
+            <button class="item" onclick="handleClick('2')">2</button>
+            <button class="item" onclick="handleClick('3')">3</button>
+            <button class="item" onclick="handleClick('+')">+</button>
+            <button class="item" onclick="handleClick('-')">-</button>
         </div>
 
         <div class="flex-boxes">
-            <button class="item">0</button>
-            <button class="item">00</button>
-            <button class="item">.</button>
-            <button class="item">Ans</button>
-            <button class="item">=</button>
+            <button class="item" onclick="handleClick('0')">0</button>
+            <button class="item" onclick="handleClick('00')">00</button>
+            <button class="item" onclick="handleClick('.')">.</button>
+            <button class="item" onclick="calculate()">Ans</button>
+            <button class="item" onclick="calculate()">=</button>
         </div>
 
 
     </div>
+
+    <script>
+        function handleClick(key){
+        const inputscreen = document.getElementById('input-box');
+        inputscreen.value += key ;
+        }
+
+        function clearScreen(key){
+        const inputscreen = document.getElementById('input-box');
+        inputscreen.value = " ";
+        }
+
+        function calculate(key){
+        const inputscreen = document.getElementById('input-box');
+        inputscreen.value = eval(inputscreen.value);
+        }
+        
+    </script>
 </body>
 </html>

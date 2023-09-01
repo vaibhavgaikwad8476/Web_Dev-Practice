@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Themes</title>
+    <style>
+        .title{
+            text-align: center;
+            font-size: 30px;
+        }
+        .card{
+            margin-left: auto;
+            margin-right: auto;
+            height: 350px;
+            width: 300px;
+            border: 1px solid black;
+            border-radius: 20px;
+        }
+        .bulb-img{
+            margin-left: auto;
+            display: block;
+            margin-right: auto;
+            margin-top: 60px;
+        }
+        .box{
+            display: flex;
+            justify-content: space-around;
+        }
+        button{
+            margin-top: 70px;
+            cursor: pointer;
+            padding: 5px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <p class="title">Toggle Bulb 💡</p>
+    <div class="card">
+        <img src="./images/glow-bulb.png" class="bulb-img" id="bulb-img">
+         
+        <div class="box">
+            <button onClick="bulbOn()">ON 🌞</button>
+            <button onClick="bulbOff()">OFF 🌚</button>
+        </div>
+    </div>
+
+    <script>
+        function bulbOn(){
+            const bulb = document.getElementById("bulb-img");
+            bulb.src = "./images/glow-bulb.png";
+
+        }
+        function bulbOff(){
+            const bulb = document.getElementById("bulb-img");
+            bulb.src = "./images/off-bulb.png";
+}
+    </script>
+</body>
+</html>

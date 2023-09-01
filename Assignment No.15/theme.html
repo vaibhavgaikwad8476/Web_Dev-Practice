@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Mode</title>
+    <style>
+        .lighter-theme{
+          color: black;
+          background-color: aliceblue;
+      }
+        .dark-theme{
+          color: white;
+          background-color: rgb(34, 34, 69);
+        }
+        button{
+            display: block;
+            cursor: pointer;  
+            margin-top: 20px;  
+        }
+        .des{
+            font-size: 20px;
+            text-align: center;           
+        }
+        .box{
+            display: flex;
+            justify-content: space-around;
+        }
+        #theem{
+            margin-right: -200px;
+            height: 30px;
+            display: block;
+        }
+        #theem1{
+            margin-left: -200px;
+            height: 30px;
+            display: block;
+        }
+
+    </style>
+</head>
+<body class="lighter-theme" id="body">
+
+   <p class="des"> Dark And Light Theme</p>
+   <div class="box">
+   <button id="theem" onClick="toggledark()">🌻</button>
+   <button id="theem1" onClick="togglelighter()">🌑</button>
+</div>
+
+    
+</body>
+<script>
+    function togglelighter(){
+        const bodyElement =document.getElementById("body");
+        bodyElement.classList.remove("lighter-theme");
+        bodyElement.classList.add("dark-theme");
+    }
+    function toggledark(){
+        const bodyElement =document.getElementById("body");
+        bodyElement.classList.add("lighter-theme");
+        bodyElement.classList.remove("dark-theme");
+    }
+
+</script>
+</html>

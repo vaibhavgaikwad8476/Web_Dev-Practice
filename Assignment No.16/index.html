@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Array</title>
+    <style>
+        .box{
+            margin: auto;
+            height:400px;
+            width: 300px;
+            border: 2px solid black;
+            margin-top: 50px;
+            border-radius:20px;
+        
+        }
+        .diceImage{
+            margin-top: 50px;
+            display: block;
+            margin: 0 auto;
+            height: 130px;
+        }
+        .app-heading{
+            text-align: center;
+            margin: 20px;
+            margin-top: 40px;
+        }
+        .btn{
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+            margin-top: 50px;
+            height: 40px;
+            width: 100px;
+            border: 1.5px solid black;
+            border-radius: 15px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+    <h1 class="app-heading">Dice Roller </h1>
+
+    <img src="./Images/dice.png" class="diceImage" id="roll">
+
+    <button class="btn" id="roll" onClick="roll()">Roll The Dice</button>
+</div>
+</body>
+    
+    <script>
+        function roll(){
+        const randomnumber = Math.floor(Math.random() * (6-1) +1);
+        const diceImage= document.getElementById("roll");
+
+        if (randomnumber==1){
+            diceImage.src="./Images/dice (1).png";
+        }
+        else if (randomnumber==2)
+        {
+            diceImage.src="./Images/dice (2).png";
+        }
+        else if (randomnumber==3)
+        {
+            diceImage.src="./Images/dice (3).png";
+        }
+        else if (randomnumber==4)
+        {
+            diceImage.src="./Images/dice (4).png";
+        }
+        else if (randomnumber==5)
+        {
+            diceImage.src="./Images/dice (5).png";
+        }
+        else if (randomnumber==6)
+        {
+            diceImage.src="./Images/dice (6).png";
+        }
+        else{
+            diceImage.src="./Images/dice (6).png";
+        }
+    }
+
+    </script>
+
+</html>

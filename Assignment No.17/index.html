@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .stude-comp{
+            padding: 20px;
+            margin: 10px;
+            border: 1px solid black;
+            border-radius: 20px;
+            width: auto;
+            background-color: rgb(214, 158, 236);
+        }
+        .stud-name{
+            text-align: center;
+        }
+        #List{
+            background-color: rgb(234, 208, 174);
+            padding-top: 30px;
+            height: 500px;
+            border-radius: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h2 class="stud-name">STUDENT'S LIST</h2>
+
+    <div id="List">
+    <script>
+        const students = ['Aachal', 'Rutuja', 'Payal', 'Vaibhav', 'Shri', 'Anjali'];
+
+        const ListElement = document.getElementById('List')
+
+        for(let i=0 ; i<students.length ; i++)      
+        {
+            document.write(`
+                <div class="stude-comp">
+            Hello ${students[i]}<br>
+            </div>
+            `)
+        }
+    </script>
+       </div>
+</body>
+</html>
